@@ -76,6 +76,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: ${{ github.workflow }} успешно выполнен!
-=======
+#=======#
 
->>>>>>> df4ac2be75551e9403e6f3dfcd2301cf49f0cc41
+#>>>>>>> df4ac2be75551e9403e6f3dfcd2301cf49f0cc41#
