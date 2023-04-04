@@ -1,4 +1,5 @@
 # YaMDb API
+![example workflow](https://github.com/SergioEnd/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Описание проекта:
 
