@@ -93,7 +93,9 @@ docker-compose exec web python manage.py loaddata fixtures.json
 Для просмотра и изменения своих данных используйте эндпоинт ```/api/v1/users/me/```
 
 ### Примеры запросов к API:
-
+```
+IP адрес сервера : 158.160.30.110
+```
 Получение списка всех категорий:
 ```
 /api/v1/categories/
