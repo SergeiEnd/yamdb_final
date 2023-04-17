@@ -14,7 +14,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['158.160.30.110', '127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='127.0.0.1').split(',')
+ALLOWED_HOSTS = ['158.160.30.110', '127.0.0.1', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -118,12 +119,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_DIRS необходимо закомментировать или удалить
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
-STATIC_ROOT = BASE_DIR / 'static'
-# os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-# os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'users.User'
 
