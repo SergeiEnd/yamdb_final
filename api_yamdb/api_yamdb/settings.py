@@ -12,10 +12,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='127.0.0.1').split(',')
-ALLOWED_HOSTS = ['158.160.30.110', '127.0.0.1', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['*']
+#['158.160.30.110', '127.0.0.1', 'localhost', '0.0.0.0', 'web']
 
 
 # Application definition
