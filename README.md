@@ -94,7 +94,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 ### Примеры запросов к API:
 ```
-IP адрес сервера : 158.160.30.110 или http://sergio123.ddns.net
+IP адрес сервера : 158.160.30.110 
 ```
 Получение списка всех категорий:
 ```
