@@ -1,32 +1,25 @@
-from rest_framework import status, viewsets, permissions, filters
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from django.db.models import Avg
-from rest_framework.decorators import action
 from api.filters import TitleFilter
-from rest_framework.filters import SearchFilter
-from rest_framework_simplejwt.tokens import RefreshToken
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from .utils import get_confirmation_code_and_send_email
-from reviews.models import Title, Category, Genre, Review
+from rest_framework import filters, permissions, status, viewsets
+from rest_framework.decorators import action
+from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
 from .mixins import MixinSet
-from .serializers import (CommentSerializer,
-                          ReviewSerializer,
-                          RegistrationSerializer,
-                          AuthTokenSerializer,
-                          UserSerializer,
-                          TitleReadSerializer,
-                          TitleWriteSerializer,
-                          CategorySerializer,
-                          GenreSerializer)
-from .permissions import (IsAdmin,
-                          IsAuthor,
-                          IsModerator,
-                          IsAdminOrReadOnly,
-                          )
+from .permissions import IsAdmin, IsAdminOrReadOnly, IsAuthor, IsModerator
+from .serializers import (AuthTokenSerializer, CategorySerializer,
+                          CommentSerializer, GenreSerializer,
+                          RegistrationSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserSerializer)
+from .utils import get_confirmation_code_and_send_email
 
 
 class UserRegistrationView(APIView):
