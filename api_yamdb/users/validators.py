@@ -1,6 +1,5 @@
-from re import match
-
 from django.core.exceptions import ValidationError
+from re import match
 
 
 def validate_username(value):
