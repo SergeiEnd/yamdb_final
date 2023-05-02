@@ -32,19 +32,12 @@ class UserRegistrationView(APIView):
 
         if serializer.is_valid():
             serializer.save()
-            get_confirmation_code_and_send_email(username)
+            get_confirmation_code_and_send_email(username=username,
+                                                 email=email)
             return Response(
                 serializer.data,
                 status=status.HTTP_200_OK
             )
-
-        elif User.objects.filter(username=username, email=email):
-            get_confirmation_code_and_send_email(username)
-            return Response(
-                serializer.data,
-                status=status.HTTP_200_OK
-            )
-
         return Response(
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
