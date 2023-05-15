@@ -109,4 +109,10 @@ IP адрес сервера : 158.160.30.110
 /api/v1/titles/
 ```
 
-Автор: Ендовицкий Сергей (https://github.com/SergeiEnd)
+Автор: 
+
+Ендовицкий Сергей (https://github.com/SergeiEnd)
+
+(lightfire.89@mail.ru) 
+
+telegram (@end_sergio)
